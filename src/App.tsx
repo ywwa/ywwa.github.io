@@ -1,6 +1,8 @@
 function App() {
   return (
-    <div />
+    <div>
+      Root
+    </div>
   );
 }
 
