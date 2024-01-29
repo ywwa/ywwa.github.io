@@ -1,7 +1,8 @@
 {
-  "short_name": "ywwa.cc",
-  "name": "Gabriels (ywwa) Kukutis",
-  "icons": [],
+  "short_name": "ywwacc",
+  "name": "ywwa.cc",
+  "icons": [
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

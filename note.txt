@@ -1,5 +1,0 @@
-manifest.json
-
-icons => {
-  {src: str, sizes: str[dimX_x_dimY ...n],  type: str[mime/type]}
-}
