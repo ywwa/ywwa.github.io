@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.39d187c4.css",
-    "main.js": "/static/js/main.443a01dd.js",
+    "main.css": "/static/css/main.1a9c0be3.css",
+    "main.js": "/static/js/main.b28c02fb.js",
     "static/media/ywwa.png": "/static/media/ywwa.628584587d0887fb59a0.png",
     "index.html": "/index.html",
-    "main.39d187c4.css.map": "/static/css/main.39d187c4.css.map",
-    "main.443a01dd.js.map": "/static/js/main.443a01dd.js.map"
+    "main.1a9c0be3.css.map": "/static/css/main.1a9c0be3.css.map",
+    "main.b28c02fb.js.map": "/static/js/main.b28c02fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.39d187c4.css",
-    "static/js/main.443a01dd.js"
+    "static/css/main.1a9c0be3.css",
+    "static/js/main.b28c02fb.js"
   ]
 }
