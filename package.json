@@ -16,12 +16,13 @@
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "tailwindcss-safe-area": "^0.4.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "bash scripts/dl_img.sh && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build && cp -r CNAME build",

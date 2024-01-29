@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: [
+          '"Poppins", sans-serif',
+        ],
+        lexend: [
+          '"Lexend", sans-serif',
+        ],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-safe-area")],
 };
