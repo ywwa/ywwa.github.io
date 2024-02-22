@@ -19,7 +19,7 @@ export const arrContacts: TContact[] = [
   { title: "Telegram", target: "https://t.me/y0wwa", icon: FaTelegramPlane },
   {
     title: "Email",
-    target: "mailto:gabriels.kukutis.proton.me",
+    target: "mailto:gabriels.kukutis@proton.me",
     icon: MdAlternateEmail,
   },
 ];
