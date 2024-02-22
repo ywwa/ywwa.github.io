@@ -19,7 +19,7 @@ function Layout() {
   return (
     <div
       id="layout"
-      className={`font-inter dark:bg-zinc-900 dark:text-zinc-200 h-screen 
+      className={`font-inter dark:bg-zinc-900 dark:text-zinc-200 h-screen-safe
         bg-[size:26px_26px] bg-fixed dark:bg-squared-dark bg-squared-light`}
     >
       <Outlet />
