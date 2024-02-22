@@ -1,5 +1,7 @@
 function Error() {
-  return <div className="h-svh flex items-center justify-center">404</div>;
+  return (
+    <div className="h-screen-safe flex items-center justify-center">404</div>
+  );
 }
 
 export default Error;
