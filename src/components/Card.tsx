@@ -6,9 +6,9 @@ import ThemeToggle from "./ThemeToggle";
 const Card = () => {
   return (
     <div className="flex flex-col items-center justify-center p-2 gap-2">
-      <div className="rounded-full overflow-hidden relative">
+      <div className="rounded-full overflow-hidden relative select-none">
         <ThemeToggle />
-        <img src={ghImage} className="w-56" alt="ywwa" />
+        <img src={ghImage} className="w-56 select-none" alt="ywwa" />
       </div>
       <div className="w-full">
         <div className="text-center">

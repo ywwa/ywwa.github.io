@@ -1,7 +1,8 @@
 import { TContact } from "./types";
 
 import { FiGithub } from "react-icons/fi";
-import { FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
+import { RiGitlabLine } from "react-icons/ri";
+import { FaLinkedinIn } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 
 export const age: number = Math.floor(
@@ -11,15 +12,15 @@ export const age: number = Math.floor(
 
 export const arrContacts: TContact[] = [
   { title: "Github", target: "https://github.com/ywwa", icon: FiGithub },
+  { title: "GitLab", target: "https://gitlab.com/ywwa", icon: RiGitlabLine },
   {
     title: "LinkedIn",
     target: "https://linkedin.com/in/gabriels-kukutis",
     icon: FaLinkedinIn,
   },
-  { title: "Telegram", target: "https://t.me/y0wwa", icon: FaTelegramPlane },
   {
     title: "Email",
-    target: "mailto:gabriels.kukutis@proton.me",
+    target: "mailto:contact@ywwa.cc",
     icon: MdAlternateEmail,
   },
 ];
