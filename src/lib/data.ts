@@ -1,4 +1,4 @@
-import { TContact } from "./types";
+import { TContact, TWork } from "./types";
 
 import { FiGithub } from "react-icons/fi";
 import { RiGitlabLine } from "react-icons/ri";
@@ -9,6 +9,8 @@ export const age: number = Math.floor(
   (new Date().getTime() - new Date("2003-07-15").getTime()) /
     (1000 * 3600 * 24 * 365.25),
 );
+
+export const currentWork: TWork | null = null;
 
 export const arrContacts: TContact[] = [
   { title: "Github", target: "https://github.com/ywwa", icon: FiGithub },

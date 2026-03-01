@@ -1,5 +1,5 @@
 import { IThemeToggleProps } from "@/lib/types";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useAnimate } from "framer-motion";
 
 import { WiMoonrise, WiSunrise } from "react-icons/wi";
@@ -10,18 +10,9 @@ const ThemeToggle = ({ initialTheme = "dark" }: IThemeToggleProps) => {
   );
   const [scope, animate] = useAnimate();
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const parsedTheme = (savedTheme as "dark" | "light") ?? initialTheme;
+  const themeRef = useRef(initialTheme);
 
-    setCurrentTheme(parsedTheme);
-    initIcons(parsedTheme);
-    document.body.classList.add(parsedTheme);
-
-    return () => document.body.classList.remove(currentTheme);
-  }, []);
-
-  const initIcons = (theme: "light" | "dark") => {
+  const initIcons = useCallback((theme: "light" | "dark") => {
     if (theme === "light") {
       animate(
         "#theme-icon-dark",
@@ -35,7 +26,17 @@ const ThemeToggle = ({ initialTheme = "dark" }: IThemeToggleProps) => {
         { duration: 0 },
       );
     }
-  };
+  }, [animate]);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const parsedTheme = (savedTheme as "dark" | "light") ?? initialTheme;
+
+    setCurrentTheme(parsedTheme);
+    initIcons(parsedTheme);
+    document.body.classList.add(parsedTheme);
+    themeRef.current = parsedTheme;
+  }, [initialTheme, initIcons]);
 
   const toggleTheme = () => {
     const newTheme = currentTheme === "dark" ? "light" : "dark";
@@ -44,7 +45,7 @@ const ThemeToggle = ({ initialTheme = "dark" }: IThemeToggleProps) => {
     document.body.classList.toggle("dark");
   };
 
-  const handleClick = async () => {
+  const handleClick = () => {
     toggleTheme();
     if (currentTheme === "dark") {
       animate("#theme-icon-light", {

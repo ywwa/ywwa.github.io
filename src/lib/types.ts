@@ -6,6 +6,12 @@ export type TContact = {
   icon: ComponentType<{ size?: number }>;
 };
 
+export type TWork = {
+  name: string;
+  url: string;
+  color?: string;
+};
+
 export interface IContactProps extends HTMLAttributes<HTMLAnchorElement> {
   contact: TContact;
 }

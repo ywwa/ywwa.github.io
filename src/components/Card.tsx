@@ -1,7 +1,8 @@
 import ghImage from "@/assets/images/ywwa.png";
-import { age, arrContacts } from "@/lib/data";
+import { age, arrContacts, currentWork } from "@/lib/data";
 import CardLinkButton from "./CardLinkButton";
 import ThemeToggle from "./ThemeToggle";
+import { cn } from '@/lib/utils';
 
 const Card = () => {
   return (
@@ -30,6 +31,21 @@ const Card = () => {
             <CardLinkButton key={index} contact={entry} />
           ))}
         </div>
+          {currentWork && (
+            <div className='w-full flex flex-col items-center justify-center'>
+            <p className="text-xs font-medium font-inter text-zinc-600 dark:text-zinc-400 mt-1">
+              Currently working at
+            </p>
+              <a
+                href={currentWork.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn('font-nanum text-xl font-black hover:underline align-middle', currentWork.color ? currentWork.color : 'text-purple-400')}
+              >
+                {currentWork.name}
+              </a>
+            </div>
+          )}
       </div>
     </div>
   );
